@@ -1,2 +1,2 @@
-# architect-theme
-Wordpress theme 
+# svenska-friskhet
+Wordpress theme
