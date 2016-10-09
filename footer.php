@@ -20,14 +20,6 @@
     <div class="row copy">
         <div class="twelve columns">
             <p>&copy; <?php bloginfo('author');?> <?php the_time('Y');?></p>
-            <nav class="footer-menu">
-                <?php wp_nav_menu([
-                    'theme_location' => 'footer'
-
-
-                ]); ?>
-            </nav>
-
         </div>
     </div>
 
