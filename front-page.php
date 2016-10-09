@@ -19,55 +19,15 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 ?>
 <div class="container">
 
+    <div class="row">
+          <div class="twelve columns text-divider3">
+              <?php
+              //print the text without images:
+              echo $content;
+                ?>
 
-    <?php
-
-
-    // Get the page as an Object
-    $news =  get_page_by_title('Om');
-
-    //replace post_parent value with your portfolio page id:
-    $args=array(
-        'post_type' => 'page',
-        'post_parent' => $news->ID,
-        'post_status' => 'publish',
-        'posts_per_page' => 1
-    );
-    $my_query = null;
-    $my_query = new WP_Query($args);
-    ?>
-
-
-
-    <div class="about-the-company">
-    <?php
-        //echo "<pre>"; print_r($my_query); echo "</pre>";
-        if( $my_query->have_posts() ) { ?>
-            <div class="row">
-            <?php echo''; // Här kan man skriva en rubrik
-            while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                        <div class="caption">
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                        <?php
-                        global $more; $more = false;
-                        ?>
-
-                        <?php the_content();?>
-
-                        </div>
-
-
-
-
-             <?php
-            endwhile;
-
-        }
-        wp_reset_query();  // Restore global post data stomped by the_post().
-        ?>
-        </div>
-    </div>
-
+          </div>
+      </div>
 
 
 
@@ -133,15 +93,56 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         ?>
         </div>
     </div>
-  <div class="row">
-        <div class="twelve columns text-divider3">
-            <?php
-            //print the text without images:
-            the_content();
-              ?>
 
+    <?php
+
+
+    // Get the page as an Object
+    $news =  get_page_by_title('Om');
+
+    //replace post_parent value with your portfolio page id:
+    $args=array(
+        'post_type' => 'page',
+        'post_parent' => $news->ID,
+        'post_status' => 'publish',
+        'posts_per_page' => 1
+    );
+    $my_query = null;
+    $my_query = new WP_Query($args);
+    ?>
+
+
+
+    <div class="about-the-company">
+    <?php
+        //echo "<pre>"; print_r($my_query); echo "</pre>";
+        if( $my_query->have_posts() ) { ?>
+            <div class="row">
+            <?php echo''; // Här kan man skriva en rubrik
+            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                        <div class="caption">
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                        <?php
+                        global $more; $more = false;
+                        ?>
+
+                        <?php the_content();?>
+
+                        </div>
+
+
+
+
+             <?php
+            endwhile;
+
+        }
+        wp_reset_query();  // Restore global post data stomped by the_post().
+        ?>
         </div>
     </div>
+
+
 
     <div class="projects-container">
         <?php
