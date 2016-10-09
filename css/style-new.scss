@@ -11,6 +11,7 @@
     src: url(../fonts/Raleway-Regular.ttf);
 }
 
+
 .clear{
     content: " ";
     display: table;
@@ -23,6 +24,12 @@ $green : #86e9cb;
 $blue: #4E82B9;
 $pink: #FFD1DC;
 $lightgreen : #97ffe0;
+
+
+$light-blue: #49bfe0;
+$dark-blue: #0085c5;
+$grey: #c5c6c8;
+$green: #42a62a;
 
 @mixin p-text{
     color: black;
@@ -50,6 +57,7 @@ h1, h2, h3{
     font-family: OpenSans;
     text-transform: uppercase;
     text-align: center;
+    color: red;
 }
 
 h2.header-text{
@@ -243,6 +251,29 @@ nav {
 #desktop-menu ul li .sub-menu li{
     padding: 5px 0;
 }
+
+/* ---- Front page Om företaget - Svenska Frisket -------*/
+
+.about-the-company{
+  padding: 20px;
+  background-color: #ffffff;
+  a{
+    @include p-text;
+    font-size: 35px;
+    color: $green;
+    padding-bottom: 15px;
+  }
+  p{
+    @include p-text;
+    max-width: 900px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+
+>>>>>>> 3cfa6c0094b9650d423cc0ab91951a035f409bd0
 
 /* ---- Front page News -------*/
 
@@ -1032,7 +1063,7 @@ footer{
     }
 
     .header-image{
-        height: 720px;
+        height: 520px;
     }
     .header-image-page{
         height: 400px;
@@ -1160,7 +1191,7 @@ footer{
 
     }
     .header-image{
-        height: 730px;
+        height: 530px;
         h3{
             font-family: OpenSans;
             text-transform: none;
