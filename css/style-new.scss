@@ -92,6 +92,8 @@ h2.header-text{
     background-position: center center;
     background-size: cover;
     //background-attachment: fixed;
+    background-size: cover;
+    background-attachment: fixed;
 
 }
 
@@ -122,16 +124,16 @@ body, html{
 }
 
 header {
-    z-index: 5;
+    z-index: 100;
     position: fixed;
     width: 100%;
     background: white;
     transition: background 1s;
-    z-index: 2;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 1px 2px 1px 0px rgba(129, 129, 129, 0.1);
     #desktop-menu{
         display: none;
     }
@@ -255,25 +257,22 @@ nav {
 /* ---- Front page Om företaget - Svenska Frisket -------*/
 
 .about-the-company{
-  padding: 20px;
-  background-color: #ffffff;
-  a{
-    @include p-text;
-    font-size: 35px;
-    color: $green;
-    padding-bottom: 15px;
-  }
-  p{
-    @include p-text;
-    max-width: 900px;
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-  }
+    padding: 20px;
+    background-color: #ffffff;
+    a{
+        @include p-text;
+        font-size: 35px;
+        color: $green;
+        padding-bottom: 15px;
+    }
+    p{
+        @include p-text;
+        max-width: 900px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
 }
-
-
->>>>>>> 3cfa6c0094b9650d423cc0ab91951a035f409bd0
 
 /* ---- Front page News -------*/
 
