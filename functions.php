@@ -15,6 +15,7 @@ add_action( 'wp_enqueue_scripts', 'add_my_script' );
 function wpt_theme_styles(){
     wp_enqueue_style( 'skeleton_css', get_template_directory_uri() . '/css/skeleton.css');
     wp_enqueue_style( 'style-new', get_template_directory_uri() . '/css/style-new.css');
+    wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 
 }
 

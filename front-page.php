@@ -30,8 +30,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         'post_type' => 'page',
         'post_parent' => $news->ID,
         'post_status' => 'publish',
-        'posts_per_page' => 4,
-        'caller_get_posts'=> 1
+        'posts_per_page' => 4
     );
     $my_query = null;
     $my_query = new WP_Query($args);
@@ -96,9 +95,8 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             'post_type' => 'page',
             'post_parent' => $project->ID,
             'post_status' => 'publish',
-            'posts_per_page' => 4,
-            'caller_get_posts'=> 1
-        );
+            'posts_per_page' => 4
+                );
         $my_query = null;
         $my_query = new WP_Query($args);
         //echo "<pre>"; print_r($my_query); echo "</pre>";
@@ -111,7 +109,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 
                     <div class="three columns project">
                         <div class="project-icon">
-                            <?php echo get_the_post_thumbnail( $page->ID, array(60, 60)  ); ?>
+                            <?php echo get_the_post_thumbnail( $page['ID'], array(60, 60)  ); ?>
                         </div>
                                 <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                                 <?php

@@ -35,27 +35,20 @@
 
             <?php endif; ?>
 
-                <img id="show-menu" src="<?php bloginfo('template_directory'); ?>/images/menu_button.png">
+                <!-- <img id="show-menu" src="<?php bloginfo('template_directory'); ?>/images/menu_button.png"> -->
+
+
 
                 <nav id="desktop-menu" class="main-nav">
-                    <?php wp_nav_menu([
+                    <div class="responsive-menu">
+                        <?php wp_nav_menu([
 
-                    'theme_location' => 'primary'
+                            'theme_location' => 'primary'
 
-                ]); ?>
-
-
+                        ]); ?>
+                    </div>
                 </nav>
 
-                <nav id="menu" class="main-nav">
-                    <?php wp_nav_menu([
-
-                    'theme_location' => 'primary'
-
-                ]); ?>
-
-
-                </nav>
 
 
 
