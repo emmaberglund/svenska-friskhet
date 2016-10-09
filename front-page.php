@@ -18,18 +18,16 @@
 $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_column' => 'menu_order'));
 ?>
 <div class="container">
-
-
     <?php
 
 
     // Get the page as an Object
-    $news =  get_page_by_title('Om');
+    $om =  get_page_by_title('Om');
 
     //replace post_parent value with your portfolio page id:
     $args=array(
         'post_type' => 'page',
-        'post_parent' => $news->ID,
+        'post_parent' => $om->ID,
         'post_status' => 'publish',
         'posts_per_page' => 1
     );
@@ -116,15 +114,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                         <div class="button-div">
                             <input class="view-button" type="button" value="Läs mer" onclick="location.href='<?php the_permalink() ?>';">
                         </div>
-
-
-
-
-
-
-
                     </div>
-
              <?php
             endwhile;
 
@@ -133,6 +123,11 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         ?>
         </div>
     </div>
+
+
+
+
+
   <div class="row">
         <div class="twelve columns text-divider3">
             <?php
@@ -248,6 +243,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 
     </div>
 </div>
+
 
 <?php
     endwhile;
