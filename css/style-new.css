@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: LANEAR;
   src: url(../fonts/LANENAR_.ttf); }
@@ -18,7 +19,8 @@
 h1, h2, h3 {
   font-family: OpenSans;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  color: red; }
 
 h2.header-text {
   font-family: Abra, sans-serif;
@@ -138,6 +140,26 @@ header {
         -moz-transition: all 0.2s;
         -o-transition: all 0.2s;
         transition: all 0.2s; }
+
+/* ---- Front page Om företaget - Svenska Frisket -------*/
+.about-the-company {
+  padding: 20px;
+  background-color: #ffffff; }
+  .about-the-company a {
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    font-size: 35px;
+    color: #42a62a;
+    padding-bottom: 15px; }
+  .about-the-company p {
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    max-width: 900px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px; }
 
 /* ---- Front page News -------*/
 .news {
@@ -742,7 +764,7 @@ footer {
   .four.columns.workers {
     width: 50%; }
   .header-image {
-    height: 720px; }
+    height: 520px; }
   .header-image-page {
     height: 400px; }
   #show-menu {
@@ -821,7 +843,7 @@ footer {
   .four.columns.workers {
     width: 33.333%; }
   .header-image {
-    height: 730px; }
+    height: 530px; }
     .header-image h3 {
       font-family: OpenSans;
       text-transform: none;

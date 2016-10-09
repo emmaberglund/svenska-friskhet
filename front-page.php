@@ -19,6 +19,59 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 ?>
 <div class="container">
 
+
+    <?php
+
+
+    // Get the page as an Object
+    $news =  get_page_by_title('Om');
+
+    //replace post_parent value with your portfolio page id:
+    $args=array(
+        'post_type' => 'page',
+        'post_parent' => $news->ID,
+        'post_status' => 'publish',
+        'posts_per_page' => 1
+    );
+    $my_query = null;
+    $my_query = new WP_Query($args);
+    ?>
+
+
+
+    <div class="about-the-company">
+    <?php
+        //echo "<pre>"; print_r($my_query); echo "</pre>";
+        if( $my_query->have_posts() ) { ?>
+            <div class="row">
+            <?php echo''; // Här kan man skriva en rubrik
+            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                        <div class="caption">
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                        <?php
+                        global $more; $more = false;
+                        ?>
+
+                        <?php the_content();?>
+
+                        </div>
+
+
+                 
+
+             <?php
+            endwhile;
+
+        }
+        wp_reset_query();  // Restore global post data stomped by the_post().
+        ?>
+        </div>
+    </div>
+
+
+
+
+
     <?php
 
 
@@ -30,12 +83,14 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         'post_type' => 'page',
         'post_parent' => $news->ID,
         'post_status' => 'publish',
-        'posts_per_page' => 4,
-        'caller_get_posts'=> 1
+        'posts_per_page' => 4
     );
     $my_query = null;
     $my_query = new WP_Query($args);
     ?>
+
+
+
     <div class="news-container">
     <?php
         //echo "<pre>"; print_r($my_query); echo "</pre>";
@@ -44,7 +99,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             <?php echo''; // Här kan man skriva en rubrik
             while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-                    <div class="three columns news" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
+                    <div class="three columns news" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page['ID']), 'large')[0]; ?>);">
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,180,0,180C0,180,90,130,90,130C90,130,180,180,180,180C180,180,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
                             <path d="M0,0C0,0,0,50,0,50C0,50,90,70,90,70C90,70,180,50,180,50C180,50,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
@@ -78,7 +133,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         ?>
         </div>
     </div>
-    <div class="row">
+  <div class="row">
         <div class="twelve columns text-divider3">
             <?php
             //print the text without images:
@@ -96,8 +151,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             'post_type' => 'page',
             'post_parent' => $project->ID,
             'post_status' => 'publish',
-            'posts_per_page' => 4,
-            'caller_get_posts'=> 1
+            'posts_per_page' => 4
         );
         $my_query = null;
         $my_query = new WP_Query($args);
@@ -111,7 +165,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 
                     <div class="three columns project">
                         <div class="project-icon">
-                            <?php echo get_the_post_thumbnail( $page->ID, array(60, 60)  ); ?>
+                                <?php echo get_the_post_thumbnail( $page['ID'], array(60, 60)  ); ?>
                         </div>
                                 <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                                 <?php
