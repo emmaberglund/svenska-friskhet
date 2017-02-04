@@ -3,7 +3,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
     $( document ).ready(function() {
         console.log( "ready!" );
     });
-    // 
+    //
     // $(window).scroll(function() {
     //     if ($(this).scrollTop() == 0) {
     //         $('#header').css({
@@ -53,14 +53,14 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         $("#menu ul").toggle(500);
     });
 
-    $(document).ready(function () {
-        $(document).on('mouseenter', '.news', function () {
-            $(this).find(":button").fadeIn();
-        }).on('mouseleave', '.news', function () {
-            $(this).find(":button").fadeOut();
-        });
-    });
-
+    // $(document).ready(function () {
+    //     $(document).on('mouseenter', '.news', function () {
+    //         $(this).find(":button").fadeIn();
+    //     }).on('mouseleave', '.news', function () {
+    //         $(this).find(":button").fadeOut();
+    //     });
+    // });
+    //
 
 //Function for checking which workers div is clicked and show the correct block-over
 function toggle_workers( event ) {
