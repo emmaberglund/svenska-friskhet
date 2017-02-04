@@ -62,6 +62,10 @@ function our_widgets_init(){
         'before_title' => '<h4 class="widget-headline">',
         'after_title' => '</h4>'
     ]);
+     register_sidebar([
+        'name' => 'Slogan',
+        'id' => 'Slogan'
+    ]);
     register_sidebar([
         'name' => 'Address',
         'id' => 'address'

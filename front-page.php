@@ -9,6 +9,7 @@
 ?>
 
 <div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image')[0]; ?>);">
+    <?php dynamic_sidebar('Slogan'); ?>
 </div>
 <?php
 $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_column' => 'menu_order'));
@@ -147,9 +148,11 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                     }
                     ?>
                 </div>
-            </div>
 
         </div>
+
+
+</div>
 <?php
     endwhile;
 else :
