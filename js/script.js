@@ -62,6 +62,9 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
     // });
     //
 
+//Remove empty p tags
+$( 'p:empty' ).remove();
+
 //Function for checking which workers div is clicked and show the correct block-over
 function toggle_workers( event ) {
   var target = $( event.target );

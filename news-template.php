@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Nyheter
+Template Name: Städtyper
 */
 get_header();
 
@@ -12,9 +12,11 @@ $thumb_url = $thumb_url_array[0];
 if(have_posts()) :
     while (have_posts()) : the_post();
 
-?>
-        <div class="header-image-page" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image-page')[0]; ?>);">
 
+?>
+
+        <div class="header-image-page" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image-page')[0]; ?>);">
+            <h1 class="header-text-news"><?php echo get_the_title(); ?></h1>
         </div>
 <main>
 
@@ -66,6 +68,7 @@ if(have_posts()) :
 
  </div>
         </main>
+
     <?php
     endwhile;
 
