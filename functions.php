@@ -23,6 +23,13 @@ add_action('wp_enqueue_scripts', 'wpt_theme_styles' );
 
 add_theme_support( 'post-thumbnails' );
 
+//Function for formatting content
+function get_the_content_with_formatting ($more_link_text = '(more...)', $stripteaser = 0, $more_file = '') {
+	$content = get_the_content($more_link_text, $stripteaser, $more_file);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	return $content;
+}
 
 
 //function to remove images from content
