@@ -7,7 +7,9 @@
     //get the content of the current post inside the loop
     $content = get_the_content();
 ?>
+
 <div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image')[0]; ?>);">
+    <?php dynamic_sidebar('Slogan'); ?>
 </div>
 <?php
 $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_column' => 'menu_order'));
@@ -146,41 +148,8 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                     ?>
                 </div>
         </div>
-        <?php
-        // Set up the objects needed
-        $my_wp_query = new WP_Query();
-        $all_wp_pages = $my_wp_query->query(array('post_type' => 'page', 'posts_per_page' => -1 ));
-        // Get the page as an Object
-        $cases =  get_page_by_title('Cases');
-        $casesPage = get_post($cases);
-        // Filter through all pages and find Portfolio's children
-        $cases_children = get_page_children( $cases->ID, $all_wp_pages );
-        ?>
-        <div class="cases-container">
-            <div class="row">
-                    <?php
-                    $count=1;
-                    foreach ($cases_children as $case) {
-                        if($count <= 8){
-                        ?>
-                    <div class="case-item">
-                        <!--<div class="case-overlay"></div>-->
-                        <div class="case-img" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($case->ID), 'medium')[0]; ?>);" >
-                        </div>
-                        <!--<h2 class="case-title"><?php //echo $case->post_title; ?></h2>-->
-                    </div>
-                    <?php if($count % 4 == 0) {
-                        ?>
-            </div>
-                  <div class="row">
-                      <?php }
-                      $count++;
-                  }
-              }
-                  wp_reset_query();
-                  ?>
-                </div>
-    </div>
+
+     
 </div>
 <?php
     endwhile;
