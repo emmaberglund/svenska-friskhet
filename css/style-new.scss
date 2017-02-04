@@ -313,6 +313,7 @@ nav {
         display: none;
     }
     p{
+        padding: 10px;
         text-align: center;
         margin-bottom: 0px;
         display: none;
@@ -331,7 +332,7 @@ nav {
     position: absolute;
     text-align: center;
     left: 0;
-    bottom: 20%;
+    bottom: 5%;
     width: 100%;
     z-index: 12;
     .view-button{
@@ -354,8 +355,23 @@ nav {
 .news-container{
     background: white;
     width: 100%;
+    ul{
+        display: none;
+    }
+    .news{
+        background: #fff;
+        border: 1px solid #e6e6e6;
+    }
+    .news-image{
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .row{
         padding: 0 5%;
+    }
+    .caption{
+        margin-top: 10px;
     }
     svg{
         position: absolute;
@@ -418,7 +434,8 @@ nav {
 /* ---- Front page Text-divider -------*/
  .text-divider3 {
   @include p-text;
-  background-color: white;
+  background-color: white !important;
+  padding: 3% 6%;
   h2{
     @include p-text;
     font-size: 35px;
@@ -920,8 +937,9 @@ footer{
     .three.columns.news,
     .three.columns.project
     {
-        width: 50%;
-        &:first-child{
+        width: 48%;
+        margin: 1%;
+        /*&:first-child{
             border-right: 4px solid white;
         }
         &:nth-child(2){
@@ -932,7 +950,7 @@ footer{
         }
         &:nth-child(4){
             border-left: 4px solid white;
-        }
+        }*/
     }
 
     .cases-container{
@@ -988,16 +1006,17 @@ footer{
         position: absolute;
         text-align: center;
         left: 0;
-        bottom: 20%;
+        bottom: 5%;
         width: 100%;
         .view-button{
             background: rgba(white, 0.6);
             color:black;
-            border: 1px solid black;
+            border: 1px solid #e6e6e6 !important;
             display: inline-block;
             margin: 0 auto;
+            border-radius: 0px !important;
             &:hover{
-                border: 1px solid black;
+                border: 1px solid black !important;
                 opacity: 1;
                 color: black;
             }
@@ -1224,7 +1243,8 @@ footer{
 
     .three.columns.news,
     .three.columns.project{
-        width: 25%;
+        width: 23%;
+        margin: 1%;
     }
     .news-container{
         width: 100%;
@@ -1237,7 +1257,7 @@ footer{
         .news{
             //-webkit-clip-path: polygon(50% 0%, 100% 27%, 100% 100%, 0 100%, 0 27%);
             //clip-path: polygon(50% 0%, 100% 27%, 100% 100%, 0 100%, 0 27%);
-            &:first-child{
+            /*&:first-child{
                 border-left: 4px solid white;
 
             }
@@ -1253,7 +1273,7 @@ footer{
             &:nth-child(4){
                 border-right: 4px solid white;
 
-            }
+            }*/
             svg{
                 width: 101%;
             }
@@ -1271,13 +1291,12 @@ footer{
         position: absolute;
         text-align: center;
         left: 0;
-        bottom: 20%;
+        bottom:5%;
         width: 100%;
         .view-button{
             background: rgba(white, 0.6);
             color: rgba(0, 0, 0, 0.73);
             border: 1px solid black;
-            display: none;
             transition: all ease-in-out;
             &:hover{
                 border: 1px solid black;

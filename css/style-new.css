@@ -236,6 +236,7 @@ nav {
   .caption h2, .caption .metaslider {
     display: none; }
   .caption p {
+    padding: 10px;
     text-align: center;
     margin-bottom: 0px;
     display: none; }
@@ -248,7 +249,7 @@ nav {
   position: absolute;
   text-align: center;
   left: 0;
-  bottom: 20%;
+  bottom: 5%;
   width: 100%;
   z-index: 12; }
   .button-div .view-button {
@@ -265,8 +266,19 @@ nav {
 .news-container {
   background: white;
   width: 100%; }
+  .news-container ul {
+    display: none; }
+  .news-container .news {
+    background: #fff;
+    border: 1px solid #e6e6e6; }
+  .news-container .news-image {
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover; }
   .news-container .row {
     padding: 0 5%; }
+  .news-container .caption {
+    margin-top: 10px; }
   .news-container svg {
     position: absolute;
     top: -1px;
@@ -323,7 +335,8 @@ nav {
   color: black;
   font-family: OpenSans, sans-serif;
   font-size: 16px;
-  background-color: white; }
+  background-color: white !important;
+  padding: 3% 6%; }
   .text-divider3 h2 {
     color: black;
     font-family: OpenSans, sans-serif;
@@ -711,19 +724,20 @@ footer {
       border-bottom: 3px solid #4E82B9; }
   .three.columns.news,
   .three.columns.project {
-    width: 50%; }
-    .three.columns.news:first-child,
-    .three.columns.project:first-child {
-      border-right: 4px solid white; }
-    .three.columns.news:nth-child(2),
-    .three.columns.project:nth-child(2) {
-      border-left: 4px solid white; }
-    .three.columns.news:nth-child(3),
-    .three.columns.project:nth-child(3) {
-      border-right: 4px solid white; }
-    .three.columns.news:nth-child(4),
-    .three.columns.project:nth-child(4) {
-      border-left: 4px solid white; }
+    width: 48%;
+    margin: 1%;
+    /*&:first-child{
+            border-right: 4px solid white;
+        }
+        &:nth-child(2){
+            border-left: 4px solid white;
+        }
+        &:nth-child(3){
+            border-right: 4px solid white;
+        }
+        &:nth-child(4){
+            border-left: 4px solid white;
+        }*/ }
   .cases-container .row:nth-child(odd) .case-item {
     background: white; }
     .cases-container .row:nth-child(odd) .case-item:nth-child(odd) {
@@ -756,16 +770,17 @@ footer {
     position: absolute;
     text-align: center;
     left: 0;
-    bottom: 20%;
+    bottom: 5%;
     width: 100%; }
     .button-div .view-button {
       background: rgba(255, 255, 255, 0.6);
       color: black;
-      border: 1px solid black;
+      border: 1px solid #e6e6e6 !important;
       display: inline-block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      border-radius: 0px !important; }
       .button-div .view-button:hover {
-        border: 1px solid black;
+        border: 1px solid black !important;
         opacity: 1;
         color: black; }
   .contact-container .six.columns {
@@ -914,7 +929,8 @@ footer {
         margin-bottom: 0; }
   .three.columns.news,
   .three.columns.project {
-    width: 25%; }
+    width: 23%;
+    margin: 1%; }
   .news-container {
     width: 100%;
     display: block;
@@ -922,30 +938,38 @@ footer {
     background: white; }
     .news-container .row {
       padding: 0 5%; }
-    .news-container .news:first-child {
-      border-left: 4px solid white; }
-    .news-container .news:nth-child(2) {
-      border-right: 4px solid white; }
-    .news-container .news:nth-child(3) {
-      border-left: 4px solid white;
-      border-right: 4px solid white; }
-    .news-container .news:nth-child(4) {
-      border-right: 4px solid white; }
-    .news-container .news svg {
-      width: 101%; }
+    .news-container .news {
+      /*&:first-child{
+                border-left: 4px solid white;
+
+            }
+            &:nth-child(2){
+                border-right: 4px solid white;
+
+            }
+            &:nth-child(3){
+                border-left: 4px solid white;
+                border-right: 4px solid white;
+
+            }
+            &:nth-child(4){
+                border-right: 4px solid white;
+
+            }*/ }
+      .news-container .news svg {
+        width: 101%; }
   header #menu ul li {
     padding: 27px 20px; }
   .button-div {
     position: absolute;
     text-align: center;
     left: 0;
-    bottom: 20%;
+    bottom: 5%;
     width: 100%; }
     .button-div .view-button {
       background: rgba(255, 255, 255, 0.6);
       color: rgba(0, 0, 0, 0.73);
       border: 1px solid black;
-      display: none;
       transition: all ease-in-out; }
       .button-div .view-button:hover {
         border: 1px solid black;
