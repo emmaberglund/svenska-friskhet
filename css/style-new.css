@@ -319,22 +319,35 @@ nav {
 
 /* ---- END Front page Projects -------*/
 /* ---- Front page Text-divider -------*/
-.text-divider, .text-divider3 {
+.text-divider3 {
+  color: black;
+  font-family: OpenSans, sans-serif;
+  font-size: 16px;
+  background-color: white; }
+  .text-divider3 h2 {
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    font-size: 35px;
+    color: #42a62a;
+    padding-bottom: 15px; }
+
+.text-divider {
   color: black;
   font-family: OpenSans, sans-serif;
   font-size: 16px;
   background: rgba(0, 0, 0, 0.9);
   padding: 40px 40px 40px 40px; }
-  .text-divider li, .text-divider3 li {
+  .text-divider li {
     list-style: none; }
-    .text-divider li a, .text-divider3 li a {
+    .text-divider li a {
       color: #4E82B9; }
-  .text-divider p, .text-divider3 p {
+  .text-divider p {
     margin-bottom: 1em;
     margin-top: 1em;
     text-align: center;
     color: white; }
-  .text-divider h2, .text-divider3 h2 {
+  .text-divider h2 {
     font-size: 2em;
     color: white; }
 

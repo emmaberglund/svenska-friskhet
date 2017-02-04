@@ -416,8 +416,18 @@ nav {
 /* ---- END Front page Projects -------*/
 
 /* ---- Front page Text-divider -------*/
+ .text-divider3 {
+  @include p-text;
+  background-color: white;
+  h2{
+    @include p-text;
+    font-size: 35px;
+    color: $green;
+    padding-bottom: 15px;
 
-.text-divider, .text-divider3 {
+  }
+ }
+.text-divider{
     @include p-text;
     background: rgba(0, 0, 0, 0.9);
     padding: 40px 40px 40px 40px;
