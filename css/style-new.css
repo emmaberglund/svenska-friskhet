@@ -31,6 +31,11 @@ h2.header-text {
   h2.header-text p {
     text-align: center; }
 
+h2.widgettitle {
+  color: white;
+  text-align: left;
+  font-size: 16px; }
+
 .attachment-post-thumbnail {
   width: 100%;
   height: auto;
@@ -183,7 +188,7 @@ nav {
   padding: 20px 0px;
   background-color: #ffffff; }
   .about-the-company .row {
-    background-color: #0085c5;
+    background-color: #4f80b3;
     padding: 45px 0px; }
   .about-the-company a {
     color: black;
@@ -191,7 +196,6 @@ nav {
     font-size: 16px;
     font-size: 20px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.6);
     color: white;
     text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.6);
     transition: all ease-in-out;
@@ -207,7 +211,6 @@ nav {
     letter-spacing: .1rem;
     text-transform: uppercase;
     box-sizing: border-box;
-    background-color: #0085c5;
     color: white; }
     .about-the-company a:hover {
       background-color: #4471a0; }
@@ -334,7 +337,8 @@ nav {
       color: black;
       font-family: OpenSans, sans-serif;
       font-size: 21px;
-      text-align: center; }
+      text-align: center;
+      font-size: 16px; }
 
 .project {
   margin-top: 20px;
@@ -350,6 +354,9 @@ nav {
   margin: auto;
   margin-bottom: 10px;
   padding: 10px; }
+  .project-icon img:nth-child(1), .project-icon img:nth-child(3) {
+    width: 60px !important;
+    height: 60px !important; }
 
 /* ---- END Front page Projects -------*/
 /* ---- Front page Text-divider -------*/
@@ -408,16 +415,16 @@ nav {
 
 /* ---- End Front page Text-divider -------*/
 /* Push offer*/
-.textwidget {
+.header-image .textwidget {
   position: absolute;
-  top: 250px;
+  top: 280px;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   list-style: none; }
-  .textwidget p {
+  .header-image .textwidget p {
     text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.93);
     color: white;
     text-transform: inherit;
@@ -652,9 +659,9 @@ nav {
 
 /* ---- End Contact Page ---- */
 footer {
-  text-align: center;
+  text-align: left;
   font-family: OpenSans, sans-serif;
-  font-size: 1.1em; }
+  font-size: 16px; }
   footer .footer1 {
     position: relative; }
     footer .footer1 .overlay {
@@ -671,7 +678,8 @@ footer {
   footer .footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    padding: 10% 10% 5%; }
+    /*padding: 10% 10% 5%;*/
+    padding: 20px 20px 0px 20px; }
     footer .footer p, footer .footer a {
       color: white; }
     footer .footer a:hover {
@@ -787,7 +795,8 @@ footer {
 ul li {
   color: black;
   font-family: OpenSans, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: white; }
 
 /* --- End News page ---- */
 /*MEDIA QUERIES */
@@ -870,8 +879,8 @@ ul li {
       margin: 0 auto;
       border-radius: 0px !important; }
       .button-div .view-button:hover {
-        background-color: black;
-        color: white; }
+        color: #4471a0;
+        border: 1px solid #4471a0; }
   .contact-container .six.columns {
     margin-left: 0; }
   .contact-container .contact-intro {
@@ -970,20 +979,27 @@ ul li {
     width: 25%; }
   .project {
     width: 50%; }
-  footer .footer {
-    padding: 10% 10% 8%; }
+  footer .footer .four {
+    width: 25%;
+    margin: 0; }
+    footer .footer .four li {
+      text-align: center; }
+    footer .footer .four p {
+      text-align: center; }
   footer .copy {
     font-size: 0.9em;
-    padding: 0 10px;
+    padding: 10px 10px;
     background: black;
-    border-top: 1px solid rgba(255, 255, 255, 0.36); }
+    /*border-top: 1px solid rgba(255, 255, 255, 0.36);*/ }
     footer .copy a {
-      color: white; }
+      color: white;
+      font-size: 12px; }
       footer .copy a:hover {
         color: #bdbdbd; }
     footer .copy p {
-      float: right;
-      color: white; }
+      text-align: center;
+      color: white;
+      font-size: 12px; }
     footer .copy .footer-menu {
       text-align: left;
       display: block; }
@@ -1016,10 +1032,12 @@ ul li {
       .header-image h3 p {
         color: white;
         margin-bottom: 0; }
-  .three.columns.news,
-  .three.columns.project {
+  .three.columns.news {
     width: 23%;
     margin: 1%; }
+  .three.columns.project {
+    width: 31%;
+    margin-bottom: 40px; }
   .news-container {
     width: 100%;
     display: block;
@@ -1084,3 +1102,13 @@ ul li {
     width: 285px; }
   .three.columns.sub {
     width: 15%; } }
+
+.row .footer .textwidget {
+  color: white; }
+  .row .footer .textwidget ul {
+    text-align: left; }
+  .row .footer .textwidget li {
+    color: white !important;
+    text-align: left !important; }
+  .row .footer .textwidget .widgettitle {
+    text-align: left; }

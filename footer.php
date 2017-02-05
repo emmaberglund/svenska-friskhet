@@ -1,25 +1,22 @@
 <footer>
-    <div class="row">
-        <div class="twelve columns footer1">
-            <div class="overlay" onClick="style.pointerEvents='none'"></div>
-            <?php dynamic_sidebar('FooterMap'); ?>
-        </div>
-    </div>
     <div class="row footer">
         <div class="four columns">
             <?php dynamic_sidebar('Address'); ?>
         </div>
-        <div class="four columns social">
-            <?php dynamic_sidebar('Social Media'); ?>
-        </div>
         <div class="four columns">
-            <?php dynamic_sidebar('Email and phone'); ?>
+            <?php dynamic_sidebar('Email'); ?>
+        </div>
+          <div class="four columns">
+            <?php dynamic_sidebar('Phone'); ?>
+        </div>
+         <div class="four columns">
+            <?php dynamic_sidebar('Logo in footer'); ?>
         </div>
     </div>
 
     <div class="row copy">
         <div class="twelve columns">
-            <p>&copy; <?php bloginfo('author');?> <?php the_time('Y');?></p>
+            <p>&copy; <?php bloginfo('author');?></p>
         </div>
     </div>
 

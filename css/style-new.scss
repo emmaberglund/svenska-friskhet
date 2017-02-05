@@ -30,6 +30,8 @@ $blue:  #0085c5;
 $grey: #c5c6c8;
 $green: #42a62a;
 
+$new-blue: #4f80b3;
+
 @mixin p-text{
     color: black;
     font-family: OpenSans, sans-serif;
@@ -68,6 +70,11 @@ h2.header-text{
     p{
         text-align: center;
     }
+}
+h2.widgettitle{
+    color: white;
+    text-align: left;
+    font-size: 16px;
 }
 
 
@@ -260,7 +267,7 @@ nav {
 
 .about-the-company{
     .row{
-        background-color: $blue;
+        background-color: $new-blue;
         padding: 45px 0px;
     }
     padding: 20px 0px;
@@ -269,7 +276,6 @@ nav {
         @include p-text;
         font-size: 20px;
         padding: 15px;
-        background: rgba(255, 255, 255, 0.6);
         color: white;
         text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.6);
         transition: all ease-in-out;
@@ -285,7 +291,7 @@ nav {
         letter-spacing: .1rem;
         text-transform: uppercase;
         box-sizing: border-box;
-         background-color: $blue;
+         
             color: white;
         &:hover{
             background-color: #4471a0;
@@ -436,6 +442,7 @@ nav {
         }
         a{
             @include p-header-text;
+            font-size: 16px;
         }
     }
 }
@@ -456,6 +463,10 @@ nav {
         margin: auto;
         margin-bottom: 10px;
         padding:10px;
+        &:nth-child(1), &:nth-child(3){
+            width: 60px !important;
+            height: 60px !important;
+        }   
     }
 }
 /* ---- END Front page Projects -------*/
@@ -522,10 +533,10 @@ nav {
 /* ---- End Front page Text-divider -------*/
 
 /* Push offer*/
-
+.header-image{
 .textwidget{
     position: absolute;
-    top: 250px;
+    top: 280px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -545,6 +556,10 @@ nav {
         }
     }
 }
+}
+
+
+
 
 /* End push offer*/
 
@@ -837,9 +852,10 @@ nav {
 
 
 footer{
-    text-align: center;
+
+    text-align: left;
     font-family: OpenSans, sans-serif;
-    font-size: 1.1em;
+    font-size: 16px;
     .footer1{
         position: relative;
         .overlay {
@@ -860,10 +876,12 @@ footer{
     .footer{
         background-color: rgba(0, 0, 0, 0.9);
         color: white;
-        padding: 10% 10% 5%;
+        /*padding: 10% 10% 5%;*/
+        padding: 20px 20px 0px 20px;
 
         p, a{
             color: white;
+
         }
         a:hover{
             color:rgb(189, 189, 189);
@@ -1001,6 +1019,7 @@ footer{
 ul{
     li{
         @include p-text;
+        color: white;
     }
 }
 
@@ -1128,9 +1147,11 @@ ul{
             display: inline-block;
             margin: 0 auto;
             border-radius: 0px !important;
+
             &:hover{
-               background-color: black;
-               color: white; 
+               color: #4471a0;
+               border: 1px solid #4471a0;
+
             }
         }
     }
@@ -1289,23 +1310,34 @@ ul{
 
     footer{
         .footer{
-            padding: 10% 10% 8%;
+            .four{
+                width: 25%;
+                margin: 0;
+                li{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
         }
         .copy{
             a{
                 color: white;
+                font-size: 12px;
                 &:hover{
                     color: #bdbdbd;
                 }
             }
             p{
-                float: right;
+                text-align: center;
                 color: white;
+                font-size: 12px;
             }
             font-size: 0.9em;
-            padding: 0 10px;
+            padding: 10px 10px;
             background: rgb(0, 0, 0);
-            border-top: 1px solid rgba(255, 255, 255, 0.36);
+            /*border-top: 1px solid rgba(255, 255, 255, 0.36);*/
             .footer-menu{
                 text-align: left;
                 display: block;
@@ -1354,9 +1386,13 @@ ul{
     }
 
     .three.columns.news,
-    .three.columns.project{
+    {
         width: 23%;
         margin: 1%;
+    }
+    .three.columns.project{
+        width: 31%;
+        margin-bottom:40px;
     }
     .news-container{
         width: 100%;
@@ -1438,4 +1474,20 @@ ul{
         width:15%;
     }
 
+}
+
+.row .footer{
+    .textwidget{
+        color: white;
+        ul{
+            text-align: left;   
+        }
+        li{
+            color: white !important;
+            text-align: left !important;   
+        }
+        .widgettitle{
+            text-align: left;   
+        }
+    }
 }

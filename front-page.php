@@ -109,7 +109,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             'post_type' => 'page',
             'post_parent' => $project->ID,
             'post_status' => 'publish',
-            'posts_per_page' => 4
+            'posts_per_page' => 3
         );
         $my_query = null;
         $my_query = new WP_Query($args);
@@ -122,9 +122,9 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             while ($my_query->have_posts()) : $my_query->the_post(); ?>
                     <div class="three columns project">
                         <div class="project-icon">
-                            <?php echo get_the_post_thumbnail( $page['ID'], array(60, 60)  ); ?>
+                            <?php echo get_the_post_thumbnail( $page['ID'], array(70, 70)  ); ?>
                         </div>
-                                <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+                                <p><?php the_title(); ?></p>
                                 <?php
                                 global $more; $more = false;
                                 ?>
