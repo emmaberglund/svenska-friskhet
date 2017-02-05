@@ -69,7 +69,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
     </div>
     <?php
     // Get the page as an Object
-    $news =  get_page_by_title('Om');
+    $news =  get_page_by_title('Offert');
     //replace post_parent value with your portfolio page id:
     $args=array(
         'post_type' => 'page',
@@ -88,7 +88,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             <?php echo''; // Här kan man skriva en rubrik
             while ($my_query->have_posts()) : $my_query->the_post(); ?>
                         <div class="caption">
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                        <p class="offert" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></p>
                         <?php
                         global $more; $more = false;
                         ?>

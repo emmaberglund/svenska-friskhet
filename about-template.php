@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Om
+Template Name: Offert
 */
 get_header();
 
