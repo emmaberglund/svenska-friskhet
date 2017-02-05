@@ -84,6 +84,8 @@ h2.header-text{
     z-index: -1;
 }
 
+
+
 .header-image{
     height: 571px;
     width: 100%;
@@ -255,24 +257,52 @@ nav {
     padding: 5px 0;
 }
 
-/* ---- Front page Om företaget - Svenska Frisket -------*/
+/* ---- Front page Begär offert - Svenska Frisket -------*/
 
 .about-the-company{
-    padding: 20px;
+    .row{
+        background-color: $blue;
+        padding: 45px 0px;
+    }
+    padding: 20px 0px;
     background-color: #ffffff;
-    a{
+    a{  
         @include p-text;
-        font-size: 35px;
-        color: $green;
-        padding-bottom: 15px;
-    }
-    p{
-        @include p-text;
-        max-width: 900px;
-        display: block;
+        font-size: 20px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.6);
+        color: white;
+        text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.6);
+        transition: all ease-in-out;
+        border: 1px solid #e6e6e6 !important;
+        display: inline-block;
         margin: 0 auto;
-        padding: 10px;
+        border-radius: 0px !important;
+        padding: 0 30px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 38px;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        box-sizing: border-box;
+         background-color: $blue;
+            color: white;
+        &:hover{
+            background-color: #4471a0;
+        }
     }
+}
+
+.offert{
+    font-family: OpenSans;
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.6);
 }
 
 /* ---- Front page News -------*/
@@ -328,7 +358,7 @@ nav {
 
 }
 
-
+    
 .button-div{
     position: absolute;
     text-align: center;
@@ -340,12 +370,11 @@ nav {
         background-color: rgba(white, 0.6);
         color: black;
         border: 1px solid black;
+        opacity: 1;
         display: inline-block;
         margin: 0 auto;
         &:hover{
-            border: 1px solid black;
-            opacity: 1;
-            color: black;
+         
         }
     }
 }
@@ -361,7 +390,7 @@ nav {
     }
     .news{
         background: #fff;
-        border: 1px solid #e6e6e6;
+        border: 1px solid #5c5e61;
     }
     .news-image{
         height: 150px;
@@ -439,9 +468,10 @@ nav {
   padding: 3% 6%;
   h2{
     @include p-text;
-    font-size: 35px;
+    font-size: 30px;
     color: $green;
     padding-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.3);
 
   }
  }
@@ -1037,16 +1067,16 @@ footer{
         bottom: 5%;
         width: 100%;
         .view-button{
+            cursor: pointer !important;
             background: rgba(white, 0.6);
             color:black;
-            border: 1px solid #e6e6e6 !important;
+            border: 1px solid #5c5e61;
             display: inline-block;
             margin: 0 auto;
             border-radius: 0px !important;
             &:hover{
-                border: 1px solid black !important;
-                opacity: 1;
-                color: black;
+               background-color: black;
+               color: white; 
             }
         }
     }
@@ -1311,7 +1341,7 @@ footer{
     header #menu ul li{
         padding: 27px 20px;
     }
-
+/*
     .view-button{
 
     }
@@ -1334,7 +1364,7 @@ footer{
             }
         }
     }
-
+*/
     .project{
         margin-top: 70px;
         margin-bottom: 70px;
