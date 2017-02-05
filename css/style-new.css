@@ -33,8 +33,10 @@ h2.header-text {
 
 h2.widgettitle {
   color: white;
-  text-align: left;
-  font-size: 16px; }
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px; }
 
 .attachment-post-thumbnail {
   width: 100%;
@@ -733,6 +735,17 @@ footer {
     footer .copy .footer-menu {
       display: none; }
 
+.footer .four .textwidget p {
+  margin-bottom: 0px; }
+
+.footer .four .textwidget a:last-child {
+  font-size: 11px; }
+
+.footer .four .textwidget img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0px; }
+
 /* --- News page ---- */
 .news-text h2 {
   font-size: 25px; }
@@ -873,8 +886,7 @@ ul li {
     .four.columns.workers:hover h3 {
       background-color: rgba(0, 0, 0, 0.8);
       border-bottom: 3px solid #0085c5; }
-  .three.columns.news,
-  .three.columns.project {
+  .three.columns.news {
     width: 48%;
     margin: 1%;
     /*&:first-child{
@@ -889,6 +901,9 @@ ul li {
         &:nth-child(4){
             border-left: 4px solid white;
         }*/ }
+  .three.columns.project {
+    width: 31%;
+    margin: 1%; }
   .cases-container .row:nth-child(odd) .case-item {
     background: white; }
     .cases-container .row:nth-child(odd) .case-item:nth-child(odd) {
@@ -1038,7 +1053,8 @@ ul li {
     width: 25%;
     margin: 0; }
     footer .footer .four li {
-      text-align: center; }
+      text-align: center;
+      font-size: 13px; }
     footer .footer .four p {
       text-align: center; }
   footer .copy {
