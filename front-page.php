@@ -25,7 +25,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
       </div>
     <?php
     // Get the page as an Object
-    $news =  get_page_by_title('Nyheter');
+    $news =  get_page_by_title('Privat');
     //replace post_parent value with your portfolio page id:
     $args=array(
         'post_type' => 'page',

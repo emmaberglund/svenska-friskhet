@@ -272,7 +272,7 @@ nav {
     }
     padding: 20px 0px;
     background-color: #ffffff;
-    a{  
+    a{
         @include p-text;
         font-size: 20px;
         padding: 15px;
@@ -345,7 +345,7 @@ nav {
     width: 100%;
     height: 100%;
     text-align: center;
-    h2, .metaslider{
+    h1, h2, h3, span, .metaslide,{
         display: none;
     }
     p{
@@ -363,7 +363,7 @@ nav {
 
 }
 
-    
+
 .button-div{
     position: absolute;
     text-align: center;
@@ -379,7 +379,7 @@ nav {
         display: inline-block;
         margin: 0 auto;
         &:hover{
-         
+
         }
     }
 }
@@ -479,7 +479,7 @@ nav {
   h2{
     @include p-text;
     font-size: 30px;
-    color: $green;
+    color: black;
     padding-bottom: 15px;
     text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.3);
 
@@ -848,6 +848,53 @@ nav {
         }
     }
 }
+
+/* ---- Start Prices Page ---- */
+.prices-container{
+    width: 70%;
+    margin: 0 auto;
+    form{
+        span.wpcf7-not-valid-tip{
+            color: #c71010;
+            font-size: 0.9em;
+            display: block;
+            text-align: left;
+        }
+        div.wpcf7-validation-errors{
+            border: 2px solid #c71010;
+            text-align: left;
+            margin: 0;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        max-width: 285px;
+        text-align: center;
+        margin: 0 auto;
+        input, textarea{
+            width: 100%;
+            font-family: LANEAR, sans-serif;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        textarea{
+            margin-bottom: 0;
+        }
+        #submit{
+            background-color:$blue;
+            color:white;
+            width: 25%;
+            padding:0;
+        }
+        textarea{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+/* ---- End Prices Page ---- */
+
 /* ---- End Contact Page ---- */
 
 
@@ -915,29 +962,46 @@ footer{
     }
     h3{
         text-align: left;
-        &:last-of-type{
+        /*&:last-of-type{
+
+        }*/
+    }
+    .news-list{
+        //padding: 20px;
+
+
+        color: white;
+        border: 1px solid $blue;
+        h3{
             padding: 20px;
-            padding-bottom: 10px;
-            margin-bottom: 0;
-            background: $light-blue;
+            padding-left: 38px !important;
+            padding-bottom: 15px;
+            margin-top: 0 !important;
+            background: $blue;
             color: white;
-            border: 1px solid $light-blue;
-            border-bottom: none;
+
         }
-    }
-    ul {
-        padding: 20px;
-        padding-top: 0;
-        border: 1px solid $light-blue;
-        border-top: none;
-    }
-    p{
-        &:last-of-type{
-            padding: 20px !important;
-            border-left: 1px solid $light-blue;
-            border-right: 1px solid $light-blue;
+        ul{
+            padding-left: 30px;
+            padding: 5px 20px;
+            /* margin-bottom: 20px; */
+            margin-left: 18px;
+            li{
+                list-style-position: outside;
+            }
+
         }
+        p{
+            padding: 5px 20px 0 !important;
+            margin-left: 18px;
+            display: flex;
+
+        }
+
     }
+
+
+
 
 }
 #submenu ul{
@@ -994,8 +1058,12 @@ footer{
     }
     h2{
         text-align: left;
-        padding: 0px 20px 20px 0px;
+        padding: 0px 20px 20px 20px;
         margin-bottom: 0px;
+    }
+    h3{
+        padding-left: 20px;
+        margin: 15px 0;
     }
 }
 
@@ -1033,6 +1101,15 @@ ul{
 @media (min-width: 480px) {
     .three.columns.sub, .nine.columns.news-text{
         width: 100%;
+        /*h2{
+            text-align: left;
+            padding: 0px 20px 20px 0px;
+            margin-bottom: 0px;
+        }
+        h3{
+            padding-left: 0px;
+            margin: 0;
+        }*/
     }
 
 }
@@ -1181,6 +1258,9 @@ ul{
         p, h2, img{
             padding-left: 0px;
             //margin-bottom: 0px;
+        }
+        h3{
+            padding-left: 0;
         }
         .slider{
             margin: auto;

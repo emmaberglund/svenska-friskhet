@@ -56,8 +56,12 @@ get_header();
                         $content = get_the_content();
                         //get the images and print them
                         $images = get_the_images($content);
-                        foreach($images as $image) {
-                            echo $image[0];
+                        if (isset($images)) {
+                            foreach($images as $image) {
+                                if(isset($image[0])){
+                                    echo $image[0];
+                                }
+                            }
                         }
                         ?>
                     </div>
