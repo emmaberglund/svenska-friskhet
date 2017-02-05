@@ -234,7 +234,7 @@ nav {
   width: 100%;
   height: 100%;
   text-align: center; }
-  .caption h2, .caption .metaslider {
+  .caption h1, .caption h2, .caption h3, .caption span, .caption .metaslide {
     display: none; }
   .caption p {
     padding: 10px;
@@ -628,6 +628,41 @@ nav {
       text-align: center;
       color: black; }
 
+/* ---- Start Prices Page ---- */
+.prices-container {
+  width: 70%;
+  margin: 0 auto; }
+  .prices-container form {
+    max-width: 285px;
+    text-align: center;
+    margin: 0 auto; }
+    .prices-container form span.wpcf7-not-valid-tip {
+      color: #c71010;
+      font-size: 0.9em;
+      display: block;
+      text-align: left; }
+    .prices-container form div.wpcf7-validation-errors {
+      border: 2px solid #c71010;
+      text-align: left;
+      margin: 0; }
+    .prices-container form p {
+      margin-bottom: 0; }
+    .prices-container form input, .prices-container form textarea {
+      width: 100%;
+      font-family: LANEAR, sans-serif;
+      margin-bottom: 0;
+      margin-top: 10px; }
+    .prices-container form textarea {
+      margin-bottom: 0; }
+    .prices-container form #submit {
+      background-color: #0085c5;
+      color: white;
+      width: 25%;
+      padding: 0; }
+    .prices-container form textarea {
+      margin-bottom: 5px; }
+
+/* ---- End Prices Page ---- */
 /* ---- End Contact Page ---- */
 footer {
   text-align: center;
@@ -673,26 +708,32 @@ footer {
   font-size: 25px; }
 
 .news-text h3 {
-  text-align: left; }
-  .news-text h3:last-of-type {
+  text-align: left;
+  /*&:last-of-type{
+
+        }*/ }
+
+.news-text .news-list {
+  color: white;
+  border: 1px solid #0085c5; }
+  .news-text .news-list h3 {
     padding: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-    background: #49bfe0;
-    color: white;
-    border: 1px solid #49bfe0;
-    border-bottom: none; }
-
-.news-text ul {
-  padding: 20px;
-  padding-top: 0;
-  border: 1px solid #49bfe0;
-  border-top: none; }
-
-.news-text p:last-of-type {
-  padding: 20px !important;
-  border-left: 1px solid #49bfe0;
-  border-right: 1px solid #49bfe0; }
+    padding-left: 38px !important;
+    padding-bottom: 15px;
+    margin-top: 0 !important;
+    background: #0085c5;
+    color: white; }
+  .news-text .news-list ul {
+    padding-left: 30px;
+    padding: 5px 20px;
+    /* margin-bottom: 20px; */
+    margin-left: 18px; }
+    .news-text .news-list ul li {
+      list-style-position: outside; }
+  .news-text .news-list p {
+    padding: 5px 20px 0 !important;
+    margin-left: 18px;
+    display: flex; }
 
 #submenu ul {
   background: rgba(0, 0, 0, 0.9);
@@ -742,8 +783,11 @@ footer {
       padding: 0px; }
   .news-text.nine.columns h2 {
     text-align: left;
-    padding: 0px 20px 20px 0px;
+    padding: 0px 20px 20px 20px;
     margin-bottom: 0px; }
+  .news-text.nine.columns h3 {
+    padding-left: 20px;
+    margin: 15px 0; }
 
 .header-text-news {
   text-shadow: 1px 1px 4px rgba(68, 68, 68, 0.93);
@@ -771,7 +815,16 @@ ul li {
 /*MEDIA QUERIES */
 @media (min-width: 480px) {
   .three.columns.sub, .nine.columns.news-text {
-    width: 100%; } }
+    width: 100%;
+    /*h2{
+            text-align: left;
+            padding: 0px 20px 20px 0px;
+            margin-bottom: 0px;
+        }
+        h3{
+            padding-left: 0px;
+            margin: 0;
+        }*/ } }
 
 /* Larger than mobile */
 /* Tablet (also point when grid becomes active) */
@@ -867,6 +920,8 @@ ul li {
       padding-bottom: 20px; }
     .nine.columns.news-text p, .nine.columns.news-text h2, .nine.columns.news-text img {
       padding-left: 0px; }
+    .nine.columns.news-text h3 {
+      padding-left: 0; }
     .nine.columns.news-text .slider {
       margin: auto;
       box-shadow: -20px 20px 20px -20px rgba(0, 0, 0, 0.9);

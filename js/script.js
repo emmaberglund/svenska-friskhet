@@ -62,6 +62,9 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
     // });
     //
 
+//Wrap div around all ul:s
+//$( ".news-text ul" ).wrapAll( "<div class='news-ul' />");
+
 //Remove empty p tags
 $( 'p:empty' ).remove();
 
