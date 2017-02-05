@@ -73,8 +73,10 @@ h2.header-text{
 }
 h2.widgettitle{
     color: white;
-    text-align: left;
-    font-size: 16px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
 }
 
 
@@ -954,6 +956,23 @@ footer{
         }
     }
 }
+.footer{
+    .four{
+        .textwidget{
+            p{
+                margin-bottom: 0px;
+            }
+            a:last-child{
+                font-size: 11px;
+            }
+            img{
+                width: 100px;
+                height: auto;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
 
 /* --- News page ---- */
 .news-text{
@@ -1122,6 +1141,7 @@ ul{
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
 
+
     .four.columns.workers{
         width: 50%;
         margin-bottom: 0px;
@@ -1142,8 +1162,8 @@ ul{
 
     }
 
-    .three.columns.news,
-    .three.columns.project
+    .three.columns.news
+   
     {
         width: 48%;
         margin: 1%;
@@ -1160,6 +1180,10 @@ ul{
             border-left: 4px solid white;
         }*/
     }
+     .three.columns.project{
+        width: 31%;
+        margin: 1%;
+     }
 
     .cases-container{
         .row:nth-child(odd){
@@ -1395,6 +1419,7 @@ ul{
                 margin: 0;
                 li{
                     text-align: center;
+                    font-size: 13px;
                 }
                 p{
                     text-align: center;
