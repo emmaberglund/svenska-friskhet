@@ -183,7 +183,7 @@ nav {
   padding: 20px 0px;
   background-color: #ffffff; }
   .about-the-company .row {
-    background-color: #4E82B9;
+    background-color: #0085c5;
     padding: 45px 0px; }
   .about-the-company a {
     color: black;
@@ -207,7 +207,7 @@ nav {
     letter-spacing: .1rem;
     text-transform: uppercase;
     box-sizing: border-box;
-    background-color: #4E82B9;
+    background-color: #0085c5;
     color: white; }
     .about-the-company a:hover {
       background-color: #4471a0; }
