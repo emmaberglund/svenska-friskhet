@@ -35,7 +35,7 @@ get_header();
                     </div>
 
             </div>
-            <div class="row fixed-image-section">
+            <!-- <div class="row fixed-image-section">
                 <div class="picture-divider">
                     <div class="fixed-image">
                         <?php
@@ -53,7 +53,7 @@ get_header();
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
             <?php
 

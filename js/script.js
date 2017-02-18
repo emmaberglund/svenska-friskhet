@@ -50,7 +50,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
     // });
 
     $("#show-menu").click(function(){
-        $("#menu ul").toggle(500);
+        $("#menu-primary").toggle(500);
     });
 
     // $(document).ready(function () {

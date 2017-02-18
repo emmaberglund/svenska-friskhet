@@ -35,7 +35,7 @@
 
             <?php endif; ?>
 
-                <!-- <img id="show-menu" src="<?php bloginfo('template_directory'); ?>/images/menu_button.png"> -->
+                <img id="show-menu" src="<?php bloginfo('template_directory'); ?>/images/menu_button.png">
 
 
 
