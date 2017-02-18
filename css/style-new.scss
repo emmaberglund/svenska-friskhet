@@ -270,7 +270,7 @@ nav {
 .about-the-company{
     .row{
         background-color: $new-blue;
-        padding: 45px 0px;
+        padding: 55px 0px;
     }
     padding: 20px 0px;
     background-color: #ffffff;
@@ -422,8 +422,18 @@ nav {
 }
 /* ---- End Front page News -------*/
 
+.textwidget{
+    text-align: center;
+    &:last-child{
+        img{
+            padding-top: 20px;
+        }
+    }
+}
+
 /* ---- Front page Projects -------*/
 .projects-container {
+    padding: 20px 0px 40px 0px;
     width: 100%;
     display: block;
     margin: auto;
@@ -477,7 +487,7 @@ nav {
  .text-divider3 {
   @include p-text;
   background-color: white !important;
-  padding: 3% 6%;
+  padding: 5% 6%;
   h2{
     @include p-text;
     font-size: 30px;
@@ -531,6 +541,12 @@ nav {
     }
 }
 
+footer .copy p{
+        background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+}
 
 /* ---- End Front page Text-divider -------*/
 
@@ -560,7 +576,14 @@ nav {
 }
 }
 
-
+.textwidget{
+    
+    &:last-child{
+        img{
+            padding-top: 0px;
+        }
+    }
+}
 
 
 /* End push offer*/
@@ -655,6 +678,7 @@ nav {
             width: 100%;
             height: auto;
         }
+        display: none;
     }
 }
 
@@ -1140,8 +1164,27 @@ ul{
 
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+    .row .footer{
+    .textwidget{
+       text-align: left;
+    }
+}
 
-
+.fixed-image-section{
+    .picture-divider{
+        height: 200px;
+        background: rgba(0, 0, 0, 0.17);
+        .fixed-image img{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            width: 100%;
+            height: auto;
+        }
+        display: block;
+    }
+}
     .four.columns.workers{
         width: 50%;
         margin-bottom: 0px;
@@ -1504,6 +1547,7 @@ ul{
         display: block;
         margin: auto;
         background: white;
+        padding: 0px 0px 60px 0px;
         .row{
             padding: 0 5%;
         }
@@ -1584,8 +1628,9 @@ ul{
 .row .footer{
     .textwidget{
         color: white;
+        text-align: center;
         ul{
-            text-align: left;   
+            text-align: center; 
         }
         li{
             color: white !important;
