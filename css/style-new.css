@@ -86,7 +86,7 @@ header {
   width: 100%;
   background: white;
   transition: background 1s;
-  padding: 10px 0;
+  padding: 20px 0;
   box-shadow: 1px 2px 1px 0px rgba(129, 129, 129, 0.1); }
   header #desktop-menu {
     list-style: none;
@@ -125,6 +125,7 @@ header {
       box-shadow: none;
       z-index: 9; }
       header #desktop-menu .menu-item-has-children .sub-menu li {
+        padding: 20px 0;
         margin: 0;
         border-bottom: none; }
         header #desktop-menu .menu-item-has-children .sub-menu li a:after {
@@ -137,7 +138,7 @@ header {
       font-weight: 300;
       margin: 0 25px;
       border-bottom: solid 1px rgba(109, 106, 106, 0.42);
-      padding: 9px 0;
+      padding: 15px 0;
       text-align: left; }
       header #desktop-menu li a {
         color: black;
@@ -1106,7 +1107,8 @@ ul li {
   header {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 10px 0; }
     header #desktop-menu {
       display: block;
       opacity: 1;
@@ -1151,8 +1153,10 @@ ul li {
         -webkit-animation-duration: 0.3s;
         animation-timing-function: ease-in-out;
         -webkit-animation-timing-function: ease-in-out; }
-        header #desktop-menu ul .menu-item-has-children .sub-menu a:after {
-          content: ""; }
+        header #desktop-menu ul .menu-item-has-children .sub-menu li {
+          padding: 5px 0; }
+          header #desktop-menu ul .menu-item-has-children .sub-menu li a:after {
+            content: ""; }
       header #desktop-menu ul li {
         font-family: Raleway, sans-serif;
         text-transform: capitalize;
