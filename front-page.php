@@ -26,6 +26,9 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
     <?php
     // Get the page as an Object
     $news =  get_page_by_title('Privat');
+    $company =  get_page_by_title('Företag');
+
+
     //replace post_parent value with your portfolio page id:
     $args=array(
         'post_type' => 'page',
@@ -33,8 +36,23 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         'post_status' => 'publish',
         'posts_per_page' => 4
     );
-    $my_query = null;
-    $my_query = new WP_Query($args);
+    $args1=array(
+        'post_type' => 'page',
+        'post_parent' => $company->ID,
+        'post_status' => 'publish',
+        'posts_per_page' => 4
+    );
+
+    //setup your queries as you already do
+    $query1 = new WP_Query($args);
+    $query2 = new WP_Query($args1);
+
+    //create new empty query and populate it with the other two
+    $my_query = new WP_Query();
+    $my_query->posts = array_merge( $query1->posts, $query2->posts );
+
+    //populate post_count count for the loop to work correctly
+    $my_query->post_count = $query1->post_count + $query2->post_count;
     ?>
     <div class="news-container">
     <?php
