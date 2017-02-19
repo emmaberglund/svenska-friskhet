@@ -17,7 +17,12 @@
     display: table;
     clear: both;
 }
-
+ul{
+    list-style: initial;
+}
+.hidden-mobile{
+    display: none;
+}
 $text-color: #fff;
 $background-color: #fff;
 $green : #86e9cb;
@@ -1417,6 +1422,12 @@ ul{
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+    .cleaning-types{
+        padding: 50px 0;
+    }
+    .hidden-mobile{
+        display: block;
+    }
     .nine.columns.news-text{
         border-left: 1px solid black;
         padding-left: 30px;
@@ -1557,6 +1568,16 @@ ul{
                     padding: 10px 13px;
                     margin-bottom: 0;
                     border-bottom: none;
+                    &:hover{
+                        .sub-menu{
+                            display: block;
+                            @media(max-width:700px){
+                                display: none;
+                            }
+
+                        }
+
+                    }
 
                     a{
                         color: #666666;

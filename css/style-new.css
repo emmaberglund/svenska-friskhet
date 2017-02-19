@@ -16,6 +16,12 @@
   display: table;
   clear: both; }
 
+ul {
+  list-style: initial; }
+
+.hidden-mobile {
+  display: none; }
+
 h1, h2, h3 {
   font-family: OpenSans;
   text-transform: uppercase;
@@ -1061,6 +1067,10 @@ ul li {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .cleaning-types {
+    padding: 50px 0; }
+  .hidden-mobile {
+    display: block; }
   .nine.columns.news-text {
     border-left: 1px solid black;
     padding-left: 30px;
@@ -1167,6 +1177,13 @@ ul li {
         padding: 10px 13px;
         margin-bottom: 0;
         border-bottom: none; }
+        header #desktop-menu ul li:hover .sub-menu {
+          display: block; } }
+        @media (min-width: 750px) and (max-width: 700px) {
+          header #desktop-menu ul li:hover .sub-menu {
+            display: none; } }
+
+@media (min-width: 750px) {
         header #desktop-menu ul li a {
           color: #666666; }
           header #desktop-menu ul li a:hover {

@@ -20,7 +20,7 @@ if(have_posts()) :
         </div>
 <main>
 
-    <div class="container">
+    <div class="container cleaning-types">
         <div class="row">
             <div class="three columns sub">
                 <?php
@@ -31,7 +31,7 @@ if(have_posts()) :
                 if ($children) { ?>
 
                     <!-- Sub Menu -->
-                    <div class="submenu" id="submenu">
+                    <div class="submenu hidden-mobile" id="submenu">
                         <ul>
                             <?php echo $children; ?>
                         </ul>
