@@ -34,13 +34,13 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         'post_type' => 'page',
         'post_parent' => $news->ID,
         'post_status' => 'publish',
-        'posts_per_page' => 4
+        'posts_per_page' => 2
     );
     $args1=array(
         'post_type' => 'page',
         'post_parent' => $company->ID,
         'post_status' => 'publish',
-        'posts_per_page' => 4
+        'posts_per_page' => 2
     );
 
     //setup your queries as you already do
