@@ -53,7 +53,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         $("#menu-primary").toggle('slide');
     });
     var open = false;
-    $("#menu-primary li").click(function(){
+    $("#menu-primary .menu-item-has-children").click(function(){
 
             open = !open;
             if(open){
