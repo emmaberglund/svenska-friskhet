@@ -50,8 +50,42 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
     // });
 
     $("#show-menu").click(function(){
-        $("#menu-primary").toggle(500);
+        $("#menu-primary").toggle('slide');
     });
+    var open = false;
+    $("#menu-primary li").click(function(){
+
+            open = !open;
+            if(open){
+                $(this).addClass('active');
+                $(this).find('.sub-menu').toggle('slide');
+
+            }
+            else{
+                $(this).removeClass('active');
+                $(this).find('.sub-menu').toggle('slide');
+                window.scrollTo(0, 0);
+            }
+
+
+
+
+
+
+        // console.log(this);
+        //
+        // if($(this).hasClass('active')){
+        //     console.log('den har klassen active');
+        //     $('this').removeClass('active');
+        //     return;
+        // }
+        // $('li').removeClass('active');
+        // console.log(this);
+        // $(this).addClass('active');
+        // $('.active .sub-menu').toggle(500);
+    });
+
+
 
     // $(document).ready(function () {
     //     $(document).on('mouseenter', '.news', function () {

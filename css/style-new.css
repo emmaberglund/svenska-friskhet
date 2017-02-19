@@ -111,8 +111,26 @@ header {
       /*float: right;*/
       margin-right: 0px;
       margin-top: 5px; }
-    header #desktop-menu .menu-item-has-children .sub-menu a:after {
-      content: ""; }
+    header #desktop-menu .menu-item-has-children .sub-menu {
+      list-style: none;
+      width: 100%;
+      display: none;
+      text-align: left;
+      margin: 0;
+      position: initial;
+      padding: 5px 15px 5px 15px;
+      border: none;
+      background: #fff;
+      margin-left: 0;
+      box-shadow: none;
+      z-index: 9; }
+      header #desktop-menu .menu-item-has-children .sub-menu li {
+        margin: 0;
+        border-bottom: none; }
+        header #desktop-menu .menu-item-has-children .sub-menu li a:after {
+          content: ""; }
+    header #desktop-menu .active a:after {
+      content: "\f106"; }
     header #desktop-menu li {
       font-family: Raleway, sans-serif;
       text-transform: capitalize;
@@ -179,8 +197,8 @@ nav {
       position: relative;
       margin: 0;
       content: " ";
-      display: table;
-      clear: both; } }
+      /*display: table;
+        clear: both;*/ } }
   nav ul, nav li {
     float: right;
     position: relative;
@@ -1113,8 +1131,28 @@ ul li {
         float: right;
         margin-right: 0px;
         margin-top: 5px; }
-      header #desktop-menu ul .menu-item-has-children .sub-menu a:after {
-        content: ""; }
+      header #desktop-menu ul .menu-item-has-children .sub-menu {
+        list-style: none;
+        width: 100%;
+        display: none;
+        text-align: left;
+        margin: 0;
+        position: absolute;
+        padding: 5px 15px 5px 15px;
+        min-width: 150px;
+        border: 1px solid #e1e1e1;
+        background: #fff;
+        margin-left: -15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+        animation-name: fadeIn;
+        -webkit-animation-name: fadeIn;
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out; }
+        header #desktop-menu ul .menu-item-has-children .sub-menu a:after {
+          content: ""; }
       header #desktop-menu ul li {
         font-family: Raleway, sans-serif;
         text-transform: capitalize;

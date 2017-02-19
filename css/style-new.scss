@@ -145,34 +145,63 @@ header {
     #desktop-menu{
 
         .menu-item-has-children{
-            a{
-                &:after{
-                    font-weight: bold;
-                    font-size: 10px;
-                    margin-left: 0.5em;
-                    text-decoration: inherit;
-                    -webkit-font-smoothing: antialiased;
-                    display: inline;
-                    width: auto;
-                    height: auto;
-                    line-height: normal;
-                    vertical-align: 10%;
-                    background-image: none;
-                    background-position: 0% 0%;
-                    background-repeat: repeat;
-                    margin-top: 0;
-                    font-family: 'FontAwesome';
-                    content: "\f107";
-                    /*float: right;*/
-                    margin-right: 0px;
-                    margin-top: 5px;
-                }
-            }
-            .sub-menu{
+
                 a{
                     &:after{
-                        content: "";
+                        font-weight: bold;
+                        font-size: 10px;
+                        margin-left: 0.5em;
+                        text-decoration: inherit;
+                        -webkit-font-smoothing: antialiased;
+                        display: inline;
+                        width: auto;
+                        height: auto;
+                        line-height: normal;
+                        vertical-align: 10%;
+                        background-image: none;
+                        background-position: 0% 0%;
+                        background-repeat: repeat;
+                        margin-top: 0;
+                        font-family: 'FontAwesome';
+                        content: "\f107";
+                        /*float: right;*/
+                        margin-right: 0px;
+                        margin-top: 5px;
                     }
+
+                }
+
+            .sub-menu{
+                list-style: none;
+                width: 100%;
+                display: none;
+                text-align: left;
+                margin: 0;
+                position: initial;
+                padding: 5px 15px 5px 15px;
+                border: none;
+                background: #fff;
+                margin-left: 0;
+                box-shadow: none;
+                z-index: 9;
+                li{
+                    margin: 0;
+                    border-bottom: none;
+                    a{
+                        &:after{
+                            content: "";
+                        }
+                    }
+                }
+
+
+            }
+        }
+        .active{
+            a{
+                &:after{
+                    content: "\f106";
+
                 }
             }
         }
@@ -257,8 +286,8 @@ nav {
         position: relative;
         margin: 0;
         content: " ";
-        display: table;
-        clear: both;
+        /*display: table;
+        clear: both;*/
     }
 
     ul, li{
@@ -1487,6 +1516,26 @@ ul{
                         }
                     }
                     .sub-menu{
+                        list-style: none;
+                        width: 100%;
+                        display: none;
+                        text-align: left;
+                        margin: 0;
+                        position: absolute;
+                        padding: 5px 15px 5px 15px;
+                        min-width: 150px;
+                        border: 1px solid #e1e1e1;
+                        background: #fff;
+                        margin-left: -15px;
+                        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+                        z-index: 9;
+                        animation-name: fadeIn;
+                        -webkit-animation-name: fadeIn;
+                        animation-duration: 0.3s;
+                        -webkit-animation-duration: 0.3s;
+                        animation-timing-function: ease-in-out;
+                        -webkit-animation-timing-function: ease-in-out;
+
                         a{
                             &:after{
                                 content: "";
