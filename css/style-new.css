@@ -736,7 +736,7 @@ footer .copy p {
         .contact-container .contact-form .contact img:hover {
           opacity: 0.6; }
     .contact-container .contact-form form {
-      width: 285px;
+      width: 360px;
       text-align: center;
       margin: 0 auto; }
       .contact-container .contact-form form input, .contact-container .contact-form form textarea {
@@ -758,7 +758,7 @@ footer .copy p {
   width: 70%;
   margin: 0 auto; }
   .prices-container form {
-    max-width: 285px;
+    max-width: 330px;
     text-align: center;
     margin: 0 auto; }
     .prices-container form span.wpcf7-not-valid-tip {
@@ -772,11 +772,15 @@ footer .copy p {
       margin: 0; }
     .prices-container form p {
       margin-bottom: 0; }
+    .prices-container form input {
+      height: 42px; }
     .prices-container form input, .prices-container form textarea {
       width: 100%;
       font-family: LANEAR, sans-serif;
       margin-bottom: 0;
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-size: 14px;
+      letter-spacing: 1px; }
     .prices-container form textarea {
       margin-bottom: 0;
       resize: none; }
@@ -786,7 +790,8 @@ footer .copy p {
       width: 25%;
       padding: 0; }
     .prices-container form textarea {
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      height: 145px; }
 
 /* ---- End Prices Page ---- */
 /* ---- End Contact Page ---- */
