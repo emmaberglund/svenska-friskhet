@@ -802,6 +802,15 @@ footer .copy p {
   margin-top: 30px;
   height: 130px; }
 
+.contact-boxes .caption h4 {
+  font-family: OpenSans, sans-serif;
+  font-size: 21px;
+  margin-bottom: 0; }
+
+.contact-boxes .caption a {
+  color: #0085c5;
+  font-size: 16px; }
+
 /* ---- End Contact Page ---- */
 footer {
   text-align: left;

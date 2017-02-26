@@ -431,7 +431,7 @@ nav {
     opacity: 0.7;
     &:hover{
         opacity: 1;
-    }   
+    }
     p{
         text-align: center;
         @include p-text;
@@ -1042,6 +1042,17 @@ footer .copy p{
         background-position: center;
         margin-top: 30px;
         height: 130px;
+    }
+    .caption{
+        h4{
+            font-family: OpenSans, sans-serif;
+            font-size: 21px;
+            margin-bottom: 0;
+        }
+        a{
+            color: $blue;
+            font-size: 16px;
+        }
     }
 }
 
