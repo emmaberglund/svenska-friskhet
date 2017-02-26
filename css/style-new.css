@@ -806,6 +806,15 @@ footer .copy p {
   .contact-boxes .three.columns.news {
     width: 28%; } }
 
+.contact-boxes .caption h4 {
+  font-family: OpenSans, sans-serif;
+  font-size: 21px;
+  margin-bottom: 0; }
+
+.contact-boxes .caption a {
+  color: #0085c5;
+  font-size: 16px; }
+
 /* ---- End Contact Page ---- */
 footer {
   text-align: left;

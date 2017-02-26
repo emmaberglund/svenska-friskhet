@@ -431,7 +431,7 @@ nav {
     opacity: 0.7;
     &:hover{
         opacity: 1;
-    }   
+    }
     p{
         text-align: center;
         @include p-text;
@@ -1048,6 +1048,19 @@ footer .copy p{
         width: 28%;
     }
 }
+
+    .caption{
+        h4{
+            font-family: OpenSans, sans-serif;
+            font-size: 21px;
+            margin-bottom: 0;
+        }
+        a{
+            color: $blue;
+            font-size: 16px;
+        }
+    }
+
 }
 
 /* ---- End Contact Page ---- */

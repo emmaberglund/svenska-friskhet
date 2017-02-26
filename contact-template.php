@@ -51,7 +51,7 @@ get_header();
                                     <path d="M0,0C0,0,0,50,0,50C0,50,90,70,90,70C90,70,180,50,180,50C180,50,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
                                     <desc>Created with Snap</desc><defs></defs></svg> -->
                                 <div class="caption">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                <h4><?php the_title(); ?></h4>
                                 <?php
                                 global $more; $more = false;
                                 ?>
