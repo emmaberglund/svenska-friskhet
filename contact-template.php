@@ -31,7 +31,7 @@ get_header();
                 'post_type' => 'page',
                 'post_parent' => $contact->ID,
                 'post_status' => 'publish',
-                'posts_per_page' => 1
+                'posts_per_page' => 3
             );
 
             $my_query = null;

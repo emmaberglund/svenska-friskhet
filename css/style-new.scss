@@ -1043,6 +1043,11 @@ footer .copy p{
         margin-top: 30px;
         height: 130px;
     }
+    @media (min-width: 1025px){
+        .three.columns.news{
+        width: 28%;
+    }
+}
 }
 
 /* ---- End Contact Page ---- */
