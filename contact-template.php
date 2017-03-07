@@ -15,7 +15,7 @@ get_header();
             while (have_posts()) : the_post();
             ?>
 
-            <div class="row">
+            <div class="row" style="display: flex;justify-content: center;">
                 <div class="twelve columns text-divider3">
                     <p><?php the_content();?></p>
                 </div>
